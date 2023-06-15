@@ -3,9 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wisata</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Pariwisata</title>
 </head>
 <body>
-  
+  <header class="header">
+    <div class="container header__intro">
+      <h1 class="brand">Yuuk<span>.</span></h1>
+
+      <p>Yuk kita jalan-jalan ke kota Bandung berpariwisata</p>
+    </div>
+
+    <nav class="navbar">
+      <div class="container navbar__container">
+        <p class="brand navbar__brand">Yuuk<span>.</span></p>
+
+        <ul class="navbar__menu">
+          <li class="navbar__link navbar__link--active">
+            <a href="#">Home</a>
+          </li>
+          <li class="navbar__link">
+            <a href="#">Tentang</a>
+          </li>
+          <li class="navbar__link">
+            <a href="#galery">Galeri</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="articles">
+      <h1>Artikel</h1>
+
+      <div class="articles__container">
+      </div>
+    </section>
+
+    <section class="galery" id="galery">
+      <h1>Galeri</h1>
+
+      <div class="galery__container">
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__copy">Copyright &copy; 2023 - Jakarta</p>
+    </div>
+  </footer>
+
+  <!-- Javascript -->
+  <script src="index.js"></script>
 </body>
 </html>

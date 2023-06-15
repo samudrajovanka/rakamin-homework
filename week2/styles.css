@@ -1,0 +1,276 @@
+:root {
+  --primary: #0079FF;
+  --secondary: #00DFA2;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+main {
+  flex: 1;
+  padding-block: 20px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+.container {
+  max-width: 1240px;
+  width: calc(100% - 32px);
+  margin-inline: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: background-color .5s ease-in-out;
+}
+
+.btn--primary {
+  background-color: var(--primary);
+}
+
+.btn--primary:hover {
+  background-color: #0062d1;
+}
+
+/* brand */
+.brand {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.brand span {
+  color: var(--secondary);
+}
+/* end of brand */
+
+/* header */
+.header__intro {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-block: 12px;
+  text-align: center;
+}
+/* end of header */
+
+/* navbar */
+.navbar {
+  background-color: var(--primary);
+  padding-block: 16px;
+  position: sticky;
+}
+
+.navbar__brand {
+  color: #ffffff;
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__menu {
+  display: flex;
+  list-style: none;
+  gap: 12px;
+  margin: 0;
+}
+
+.navbar__link {
+  border-radius: 4px;
+  transition: color .5s ease-in-out;
+}
+
+.navbar__link a {
+  display: inline-block;
+  padding: 8px 10px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  background: #ffffff;
+}
+
+:is(.navbar__link:hover, .navbar__link--active) a {
+  color: var(--primary);
+}
+/* end of navbar */
+
+/* footer */
+.footer {
+  background-color: var(--primary);
+  color: #ffffff;
+  padding-block: 12px;
+}
+
+.footer__copy {
+  text-align: center;
+}
+/* end of footer */
+
+/* galery */
+.galery {
+  margin-top: 32px;
+}
+
+.galery .galery__container {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.galery .galery__card {
+  position: relative;
+  min-width: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.galery .galery__card::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 50%, rgba(32, 32, 32, .6) 81%, rgba(32, 32, 32, .9) 95%);
+}
+
+.galery .galery__image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  transform: scale(1.1);
+  transition: transform .5s ease-in-out;
+  object-fit: cover;
+}
+
+.galery .galery__card:hover .galery__image {
+  transform: scale(1);
+}
+
+.galery .galery__title {
+  position: absolute;
+  bottom: 12px;
+  left: 8px;
+  right: 8px;
+  text-align: center;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.galery .galery__recomendation {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  background-color: var(--primary);
+  color: #ffffff;
+  font-size: .75rem;
+  z-index: 2;
+}
+/* end of galery */
+
+/* articles */
+.articles .articles__container {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.articles .article__image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.articles .article__information {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: .75rem;
+  color: #666666;
+}
+
+.articles .article__title {
+  /* margin-bottom: 8px; */
+}
+
+.articles .article__description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+/* end of articles */
+
+/* tablet */
+@media screen and (width <= 768px) {
+  .articles .articles__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .articles .article__image {
+    height: 150px;
+  }
+
+  .galery .galery__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .galery .galery__card {
+    height: 200px;
+  }
+}
+/* end of tablet */
+
+/* mobile */
+@media screen and (width <= 500px) {
+  :root {
+    --primary: #00DFA2;
+    --secondary: #0079FF;
+  }
+
+  .articles .articles__container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 32px;
+  }
+
+  .galery .galery__container {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .galery .galery__container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .galery .galery__card {
+    height: 150px;
+  }
+}
+/* end of mobile */
