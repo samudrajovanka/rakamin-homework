@@ -7,32 +7,32 @@ const articles = [
     imageUrl: 'https://blog.evermos.com/wp-content/uploads/2020/11/krstdee_122605293_348894526209830_1258374425888695369_n.jpg',
   },
   {
-    title: 'Tempat wisata Bandung yang perlu kamu datangi',
-    description: 'Wisata Bandung yang wajib kamu datangi ketika kamu sedang berjalan-jalan ke Bandung. Jangan sampai terlewati kegiatan kamu saat di Bandung.',
-    author: 'Jhon Doe',
-    createdDate: '15 Juni 2023',
-    imageUrl: 'https://blog.evermos.com/wp-content/uploads/2020/11/krstdee_122605293_348894526209830_1258374425888695369_n.jpg',
+    title: '8 Makanan khas Bandung yang wajib kamu coba',
+    description: 'Kamu lagi berlibur ke Bandung? jangan sampai lupa untuk cobain makanan khas Bandung. Berikut ini adalah makanan khas Bandung yang wajib kamu coba.',
+    author: 'Rahmat',
+    createdDate: '10 Juni 2023',
+    imageUrl: 'https://fanatech.net/blog/wp-content/uploads/2020/02/makanan-khas-bandung.png',
   },
   {
-    title: 'Tempat wisata Bandung yang perlu kamu datangi',
-    description: 'Wisata Bandung yang wajib kamu datangi ketika kamu sedang berjalan-jalan ke Bandung. Jangan sampai terlewati kegiatan kamu saat di Bandung.',
-    author: 'Jhon Doe',
-    createdDate: '15 Juni 2023',
-    imageUrl: 'https://blog.evermos.com/wp-content/uploads/2020/11/krstdee_122605293_348894526209830_1258374425888695369_n.jpg',
+    title: 'Ajak pasangan kamu ke tempat wisata romantis di Bandung',
+    description: 'Ajak pasangan kamu yuk ke Bandung dan kunjungi tempat-tempat wisata romantis di Bandung. Jangan sampai terlewatkan ya.',
+    author: 'Budiman',
+    createdDate: '1 Mei 2023',
+    imageUrl: 'https://haigadis.com/wp-content/uploads/2019/07/tempat-romantis-di-bandung-Dapur-Caringin-Tilu.jpg',
   },
   {
-    title: 'Tempat wisata Bandung yang perlu kamu datangi',
-    description: 'Wisata Bandung yang wajib kamu datangi ketika kamu sedang berjalan-jalan ke Bandung. Jangan sampai terlewati kegiatan kamu saat di Bandung.',
-    author: 'Jhon Doe',
-    createdDate: '15 Juni 2023',
-    imageUrl: 'https://blog.evermos.com/wp-content/uploads/2020/11/krstdee_122605293_348894526209830_1258374425888695369_n.jpg',
+    title: 'Ada yang baru di Farm House Lembang',
+    description: 'Yuk lebaran ini ajak keluarga kamu ke Farm House Lembang. Ada yang baru lho di Farm House Lembang. Mampir ke Farm House Lembang bareng keluarga.',
+    author: 'Rahmat',
+    createdDate: '21 Maret 2023',
+    imageUrl: 'https://2.bp.blogspot.com/-iTvjCJDTW-s/XCSrOZFCHnI/AAAAAAAA5tY/yW3UAl7hKNYQvECLN0nmOs86E2k8av_8wCLcBGAs/s1600/farmhouse-lembang.jpg',
   },
   {
-    title: 'Tempat wisata Bandung yang perlu kamu datangi',
-    description: 'Wisata Bandung yang wajib kamu datangi ketika kamu sedang berjalan-jalan ke Bandung. Jangan sampai terlewati kegiatan kamu saat di Bandung.',
+    title: 'Wisata cosplay di Bandung',
+    description: 'Kamu suka cosplay? yuk datang ke Bandung dan kunjungi tempat-tempat wisata cosplay di Bandung. Jangan sampai terlewatkan ya.',
     author: 'Jhon Doe',
-    createdDate: '15 Juni 2023',
-    imageUrl: 'https://blog.evermos.com/wp-content/uploads/2020/11/krstdee_122605293_348894526209830_1258374425888695369_n.jpg',
+    createdDate: '9 Februari 2023',
+    imageUrl: 'https://assets.kompasiana.com/items/album/2018/08/27/screenshot-2018-08-23-14-44-44-1-5b83ee7a677ffb73504e469b.png?t=o&v=760',
   },
 ];
 
@@ -118,7 +118,7 @@ const createCardArticle = (articleData) => {
   readMoreButton.classList.add('btn');
   readMoreButton.classList.add('btn--primary');
   readMoreButton.setAttribute('href', '#');
-  readMoreButton.innerText = 'Read More';
+  readMoreButton.innerText = 'Selengkapnya';
   card.appendChild(readMoreButton);
 
   const articlesContainer = document.querySelector('.articles__container');
