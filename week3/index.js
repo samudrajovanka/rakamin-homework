@@ -59,9 +59,13 @@ const getGasolineType = (plateColor, vehicle, ccCapacity) => {
   
   if (plateColor === PLATE_COLORS.yellow || vehicle === VEHICLE_TYPES.motorcycle) {
     return GASOLINE_TYPES.subsidi;
-  } else if (vehicle === VEHICLE_TYPES.car && ccCapacity < 1500) {
+  }
+  
+  if (vehicle === VEHICLE_TYPES.car && ccCapacity < 1500) {
     return GASOLINE_TYPES.pertamax;
-  } else if (vehicle === VEHICLE_TYPES.car && ccCapacity >= 1500) {
+  }
+  
+  if (vehicle === VEHICLE_TYPES.car && ccCapacity >= 1500) {
     return GASOLINE_TYPES.pertamaxTurbo;
   }
 
